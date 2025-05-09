@@ -3,7 +3,7 @@ import TaskCard from "./TaskCard";
 const Column = ({ title, tasks, onDrop, IndexVal, onEdit, onDelete }) => {
     const handleDrop = (e) => {
         const taskId = e.dataTransfer.getData("text/plain");
-        onDrop(taskId, title);
+        onDrop(Number(taskId), title);
     };
 
     return (
